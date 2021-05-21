@@ -13,3 +13,4 @@ rule windows_phish_1 : phishing
         $body3 = "please open your browser" nocase
     condition:
         all of them
+}

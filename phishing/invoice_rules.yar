@@ -14,3 +14,4 @@ rule invoice_phish_1 : phishing
         $body3 = "see the attached invoice" nocase
     condition:
         all of them
+}
