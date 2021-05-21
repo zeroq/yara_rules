@@ -64,3 +64,20 @@ rule office_phish_1: phishing
     condition:
         all of them
 }
+
+rule tax_phish_1: phishing
+{
+    meta:
+        author = "Jan Goebel"
+        description = "Detect Invoice Phishing eMail"
+        created = "2021-05-21"
+        modified = "2021-05-21"
+    strings:
+        $subject = "Recalculation of Your Tax Refund Payment" nocase
+        $sender = "irs.service@" nocase
+        $body1 = "Dear Applicant" nocase
+        $body2 = "claim your refund now" nocase
+        $body3 = "please submit the form" nocase
+    condition:
+        all of them
+}
