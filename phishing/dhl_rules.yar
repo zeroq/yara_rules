@@ -13,3 +13,4 @@ rule dhl_phish_1 : phishing
         $body2 = "confirm your payment" nocase
     condition:
         all of them
+}
